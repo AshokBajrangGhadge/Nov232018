@@ -35,9 +35,7 @@ public class ECGMS
 		try
 		{
 		
-		//String WorkbookPath= "M:\\Automation Extra data\\AutomationProjects\\HealthView\\ECGManagerAuto\\Workbook\\HW\\HV_TestCases_Selenium.xlsx";
 		
-	     //String WorkbookPath="C:\\java-neon\\ECGManagerAuto\\Workbook\\HV_TestCases_Selenium.xlsx";
 		String WorkbookPath="../ECGManagerAuto/Workbook/HV_TestCases_Selenium.xlsx";
 	    // String WorkbookPath="./Workbook/HV_TestCases_Selenium.xlsx";
 		//Create object of ExcelSheetReader to get sheet
@@ -45,7 +43,7 @@ public class ECGMS
 		Sheet sh1=workbook1.getSheetName(WorkbookPath,"TestCaseSummry");
 		Row r1;
 		int k=sh1.getLastRowNum()-sh1.getFirstRowNum();
-		//ECGMS.parentWindowHandle=
+		
 		
 		//To get total number of test cases to be execute.. Set as 0
 		ExecutionTestCaseNo=0;
