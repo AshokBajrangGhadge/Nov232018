@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ExcelReaderCls.ExcelSheetReader;
@@ -90,13 +90,16 @@ public class ECGMS
 				ECGMS.TestCaseName=r1.getCell(0).toString();
 				System.out.println(ecgms.IsNeedToRun+"------------"+ECGMS.TestCaseName);
 				
+				System.setProperty("webdriver.chrome.driver", "C:\\Exepath\\chromedriver.exe");
+                WebDriver webDriver = new ChromeDriver();
+                
 				//System.setProperty("webdriver.ie.driver", "../ECGManagerAuto/IEDirver/3.7.0/IEDriverServer.exe");
-				System.setProperty("webdriver.ie.driver", "../ECGManagerAuto/IEDirver/IEDriverServer.exe");
+				//System.setProperty("webdriver.ie.driver", "../ECGManagerAuto/IEDirver/IEDriverServer.exe");
 				//System.setProperty("webdriver.ie.driver", "./IEDirver/IEDriverServer.exe");
 				//System.setProperty("webdriver.ie.driver", "C:\\java-neon\\ECGManagerAuto\\Used\\IEDirver\\32\\IEDriverServer.exe");
-				DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-				caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-				WebDriver webDriver = new InternetExplorerDriver(caps); 
+//				DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+//				caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+//				WebDriver webDriver = new InternetExplorerDriver(caps); 
 				//System.setProperty("webdriver.gecko.driver", "..\\ECGManagerAuto\\Used\\FFox\\geckodriver.exe");
 				//DesiredCapabilities caps = DesiredCapabilities.firefox();
 			

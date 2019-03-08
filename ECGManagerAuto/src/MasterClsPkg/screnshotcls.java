@@ -31,7 +31,7 @@ public class screnshotcls
     		
 		
         File scrshot=((TakesScreenshot)mydriver).getScreenshotAs(OutputType.FILE);
-    	String myscreshotpath="H:/ECGManagerAuto/seleniumscreenshot/"+ECGMS.TestCaseName.toString()+"/"+ECGMS.TestCaseName.toString()+"_"+"Step#"+(ECGMS.TestCaseStapeNo)+".png";
+    	String myscreshotpath="C:/ECGManagerAuto/seleniumscreenshot/"+ECGMS.TestCaseName.toString()+"/"+ECGMS.TestCaseName.toString()+"_"+"Step#"+(ECGMS.TestCaseStapeNo)+".png";
         //String myscreshotpath="C:/seleniumscreenshot/"+ECGMS.TestCaseName.toString()+"/"+ECGMS.TestCaseName.toString()+"_"+"Step#"+(ECGMS.TestCaseStapeNo)+".png";
        // String myscreshotpath="D:/java-neon/Project/ECGManagerAuto/seleniumscreenshot/test.png";
         FileUtils.copyFile(scrshot, new File(myscreshotpath));
